@@ -1,0 +1,29 @@
+<div class="container w-50">
+  <h3>Find Flights:</h3>
+  <form
+    #findFlightsForm="ngForm"
+    (ngSubmit)="onSubmit(findFlightsForm.value)"
+    class="my-3 d-grid gap-3"
+  >
+    <div class="form-group">
+      <label>From</label>
+      <input type="text" name="from" class="form-control" [(ngModel)]="from" />
+    </div>
+    <div class="form-group">
+      <label>To</label>
+      <input type="text" name="to" class="form-control" [(ngModel)]="to" />
+    </div>
+    <div class="form-group">
+      <label>Departure Date</label>
+      <input
+        type="text"
+        name="departureDate"
+        class="form-control"
+        [(ngModel)]="departureDate"
+      />
+    </div>
+    <div align="center" class="mt-2">
+      <input type="submit" class="btn btn-outline-info" value="search" />
+    </div>
+  </form>
+</div>
